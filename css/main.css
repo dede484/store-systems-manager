@@ -1,0 +1,376 @@
+:root {
+    --contBefore-display: none;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    letter-spacing: 1.1px;
+    background-color: #0D1821;
+}
+
+.container {
+    width: 80%;
+    margin: 50px auto;
+}
+
+input,
+button {
+    height: 50px;
+    border: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 3px;
+    color: #F9E0D9;
+}
+
+button {
+    padding: 8px 5px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+input {
+    padding: 20px 5px 20px 15px;
+    width: 100%;
+    background-color: #0D1821;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+}
+
+::placeholder,
+.productAdder div span {
+    color: #a9a9a9;
+}
+
+input:hover,
+input:focus {
+    background-color: #17252f;
+    color: #fefefe;
+}
+
+header {
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+header h2 {
+    margin-bottom: 10px;
+}
+
+.productAdder {
+    position: relative;
+    margin-bottom: 100px;
+}   
+
+.after::after {
+    content: "";
+    width: 65%;
+    height: 2px;
+    background-color: #639A88;
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.productAdder div {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.productAdder input:hover::placeholder,
+.productAdder input:focus::placeholder { 
+    color: #eee;
+}
+
+.productAdder div:first-of-type {
+    margin-bottom: 20px;
+}
+
+.productAdder div input,
+.productAdder div span,
+.productAdder div button {
+    flex: 10;
+}
+
+#quantity,
+#add-product {
+    flex: 2;
+    text-align: center;
+}
+
+.productAdder div span {
+    padding: 10px;
+    width: 100%;
+    background-color: #0D1821;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+}
+
+.adder {
+    background-color: #720000;
+}
+
+.adder:hover {
+    background-color: rgba(114, 0, 0, .5);
+}
+
+.searchBlock {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.searchInput {
+    position: relative;
+    flex: 5;
+}
+
+.searchInput input {
+    background-color: #dddad7;
+    color: #344966;
+    padding-left: 60px;
+    border-radius: 25px;
+}
+
+.searchInput::before { 
+    font-family: "Material Icons";
+    content: "\e8b6";
+    font-size: 35px;
+    color: rgba(102, 102, 102, 0.6);
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.searchBlock .searchButtons {
+    display: flex;
+    gap: 5px;
+    justify-content: space-between;
+    align-items: center;
+    flex: 2;
+}
+
+.searchBlock .searchButtons button {
+    background-color: #344966;
+    flex: 1;
+    text-transform: capitalize;
+    font-size: 18px;
+}
+
+.searchBlock .searchButtons button:hover {
+    background-color: #344966c0;
+}
+
+table {
+    width: 100%;
+    color: white;
+    text-transform: capitalize;
+    font-size: 20px;
+}
+
+table .actions {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.action-icons{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon {
+    font-size: 23px;
+}
+
+tr {
+    display: flex;
+    gap: 5px;
+}
+
+th,
+td {
+    min-height: 60px;
+    flex: 1;
+    background-color: #0e212fd0;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+.actions .sell {
+    background-color: rgb(0, 150, 30);
+}
+.actions .sell:hover { 
+    background-color: rgba(0, 150, 30, .5);
+}
+
+.actions .update {
+    background-color: rgba(0, 16, 197, 0.7);
+}
+.actions .update:hover { 
+    background-color: rgba(0, 16, 197, 0.5);
+}
+
+.actions .info_i {
+    background-color: rgb(114, 0, 0);
+}
+.actions .info_i:hover { 
+    background-color: rgba(114, 0, 0, .5);
+}
+
+.close {
+    background-color: transparent;
+    color: papayawhip;
+}
+.close .icon {
+    font-size: 35px;
+}
+
+table thead tr {
+    margin-bottom: 10px;
+}
+
+table tbody tr {
+    margin-bottom: 5px;
+}
+
+table tbody tr td { 
+    background-color: #1c2c36d0;
+}
+
+table thead tr .action-icons {
+    cursor: default;
+}
+
+.infoContainer {
+    display: none;
+    column-gap: 10px;
+    width: 50%;
+    background-color: #17252f;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    padding: 20px 10px 10px 30px;
+    border-radius: 5px;
+}
+
+.container::before {
+    content: "";
+    display: var(--contBefore-display);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 100vh;
+    background-color: #0e0e0e;
+    filter: blur(10px);
+    opacity: .95;
+    z-index: 2;
+}
+
+.info {
+    flex: 1;
+}
+
+.info .infoInput {
+    display: flex;
+    margin-top: 35px;
+    margin-bottom: 30px;
+    column-gap: 3px;
+}
+
+.notesBtn {
+    background-color: #639A88;
+    text-transform: capitalize;
+    font-size: 18px;
+    flex: 1;
+}
+.notesBtn:hover {
+    background-color: #639a88c0;
+}
+.notesInput {
+    flex: 4;
+}
+
+ul {
+    margin-left: 40px;
+}
+
+li {
+    margin-bottom: 15px;
+    font-weight: 700;
+    font-size: 23px;
+    word-spacing: 2px;
+    letter-spacing: 1.4px;
+    text-transform: capitalize;
+    color: azure;
+}
+
+.infoDetails {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+.infoDetails .removeBtn {
+    background-color: #720000;
+    padding: 10px;
+}
+
+.infoDetails .removeBtn:hover {
+    background-color: rgba(114, 0, 0, .5);
+}
+
+.infoContainer label,
+.infoDetails h2 {
+    font-size: 30px;
+    font-weight: 800;
+    color: papayawhip;
+}
+
+.infoDetails h2 {
+    flex: 2;
+}
+.infoDetails h2 p {
+    font-size: 22px;
+    font-weight: 500;
+    color: azure;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+@media (max-width: 1220px) {
+    .infoContainer {
+        width: 70%;
+    }
+}
